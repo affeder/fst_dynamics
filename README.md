@@ -1,1 +1,3 @@
-# fst_dynamics
+# Dynamics of FST over time
+
+A minimal version of all the code to run this project can be found in the code directory in the master file toc.r (i.e., table of contents). It starts by generating prior distributions that are used elsewhere in the analysis. The complete version of this code was run highly parallelized on a cluster to produce much larger samples much more quickly. However, in order to facilitate the ability of someone to run the analysis locally, I've stripped away the parallelization, created much smaller sample parameters and raised the tolerance everywhere. However, any modification I made to run the code locally in terms of parameter choices are noted in the comments, so you can change the comments into code (and the corresponding lines into comments) to fully reproduce the large analysis. 
