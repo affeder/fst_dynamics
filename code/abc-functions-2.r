@@ -197,3 +197,16 @@ bespokeMinimization <- function(freqs, sampGens){
 }
 
 
+sAtGensVect <- function(sval, obs, relGens = relGens){
+
+    assumedN <- 10^5
+    vectorizedFreqs <- exp(as.matrix(sval) %*% relGens) / (exp(as.matrix(sval) %*% relGens) + matrix(rep(2*assumedN * sval, length(relGens)), nrow = length(sval)))
+
+    vectorizedFreqs[which(is.nan(vectorizedFreqs))] <- 1
+    obsFreqs <- matrix(rep(as.numeric(obs), length(sval)), nrow = length(sval), byrow = TRUE)
+
+return(apply((vectorizedFreqs - obsFreqs)^2, 1, sum))
+
+}
+
+

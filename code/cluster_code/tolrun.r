@@ -1,10 +1,3 @@
-source('ABC_proc.r')
-source('abc-functions-2.r')
-require(tidyverse)
-require(foreach)
-require(doParallel)
-require(parallel)
-require(RColorBrewer)
 
 
 trueMu <- .00001
