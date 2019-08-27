@@ -44,14 +44,18 @@ source('fig-vary-m-and-s.r')
 
 #Figure: Vary timepoints
 #Figure S3, S4
-source('fig-varytp-grob-2.r')
+source('fig-vary-tp-grob-2.r')
 
 #Figure: Vary tolerance
 #Figure S5
 source('fig-varytol-grob.r')
 
+#Add asymmetry
+source('fig-asym.r')
+
 #Read in for the SHIV data
 source('make-shiv-data-new-3.r')
 source('read-in-big-files-perc.r')
 source('shiv-plotter.r')
+
 

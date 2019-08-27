@@ -70,8 +70,8 @@ foreach(i = 1:nrow(stat.true.full), .combine = "rbind")%do%{
 
     selGens <- c(5, firsttp, firsttp + 30)
     relGens <- c(5, firsttp, firsttp + offs)
- 
-    if(addhund == 1){
+
+    if(addhund == 1 & firsttp + offs != 100){
         relGens <- c(relGens, 100)
     }
 
@@ -100,6 +100,7 @@ foreach(i = 1:nrow(stat.true.full), .combine = "rbind")%do%{
             col.names = FALSE, quote = FALSE, append=TRUE )
 
 }
+
 
 
 

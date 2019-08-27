@@ -1,7 +1,7 @@
 #Figure to show the effect of tolerance on estimation of m 
 
 #First, read in the data
-varytol <- tbl_df(read.table("../d_out/sumStats-varytol-n100.txt", header = FALSE))
+varytol <- tbl_df(read.table("../out/sumStats-varytol.txt", header = FALSE))
 names(varytol) <- c("N", "n", "s1", "m", "i", "type", "offs", "addhund",  "tol",
                    "s", "val", "q", "var", 
                    "med_dist", "mean_dist", "med_dist_sq", "mean_dist_sq")
@@ -132,7 +132,7 @@ g5.3$layout <- tmplay
 
 
 
-pdf(paste0("../d_graphs/s5.pdf"), width = 7, height = 5)
+pdf(paste0("../graphs/s5.pdf"), width = 7, height = 5)
 grid.draw(rbind(ggplotGrob(s5.1),g5.2, g5.3, size = "first"))
 dev.off()
 
